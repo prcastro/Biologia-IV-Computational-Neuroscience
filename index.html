@@ -66,9 +66,31 @@
                 </section>
 
                 <section>
+                	<br/><br/>The <b>brain</b> is one of the most interesting <b>complex systems</b> in the universe and the <b>most efficient signal processing device</b> know.
+                </section>
+
+                <section>
                 	<h2>Why modeling the Brain?</h2>
                 	<br/><br/>
                 	Theoretical models are used to frame hypotheses that can be directly tested by biological and psychological experiments
+                </section>
+
+                <section>
+                	<h2>How?</h2>
+                	<br/><br/>
+                	Models must <b>capture the essential features of biological systems</b> at multiple spatial-temporal scales, from membrane currents, proteins, and chemical coupling to network oscillations, architecture, learning and memory.
+                </section>
+
+                <section>
+                	<h2>Why using computers to do so?</h2>
+                	<br/><br/>
+                	To estimate the behavior of a system that is too complex for analytical solutions, but also becase of the similarity to the brain.
+                </section>
+
+                <section>
+                	<p><img src="images/wiener.jpg" style="width: 50%;"></p>
+                	"...could only be made by a team os scientists, each specialist in his own field but each possessing a throughly sound and trained acquaintance with the fields of his neighbors"
+                	<p align="right"><i>- Norbert Wiener</i></p>
                 </section>
 
                 <section>
@@ -78,8 +100,8 @@
 	                	<li class="fragment">Single-neuron modeling</li><br/>
 	                	<li class="fragment">Sensory processing</li><br/>
 	                	<li class="fragment">Memory and synaptic plasticity</li><br/>
-	                	<li class="fragment">Behaviors of networks</li><br/>
-	                	<li class="fragment">Development, axonal patterning, and guidance</li>
+	                	<li class="fragment">Cognition</li><br/>
+	                	<li class="fragment">Consciousness</li>
 	            	</ul>
                 </section>
 
@@ -104,6 +126,16 @@
                 </section>
 
                 <section>
+                	<h3>Differences from artificial systems and why using this theoretical approach</h3>
+                </section>
+
+                <section>
+                	<h2>Feedback</h2>
+                	<br/><br/>
+                	Pathways connecting regions of higher-level brain function to regions of lower level functionality. This gives rise to top-down processing theories and selective attention.
+                </section>
+
+                <section>
                 	<h2>What is Information Theory?</h2>
                 	<br/><br/>
                 	Information theory is a branch of applied mathematics and computer science involving the <b>quantification of information</b>.
@@ -119,7 +151,176 @@
                 </section>
 
                 <section>
+                	<h3>Parameters of a transmission:</h3>
+                	<br/><br/>
+                	<ul>
+                		<li class="fragment">Transmission Power</li><br/>
+                		<li class="fragment">Transmission Rate</li><br/>
+                		<li class="fragment">Transmission Code</li>
+                	</ul>
+                </section>
+
+                <section>
+                	<h3>Shannon work to solve perfect transmission problem</h3>
+                </section>
+
+                <section>
+                	<h3>Transmission Rate vs. Channel Capacity</h3>
+                </section>
+
+                <section>
+                	<h3>Intra-Organism Communication</h3>
+                	And the limitation of this presentation
+                </section>
+
+                <section>
                     <h2>Basic concepts of Information Theory</h2>
+                </section>
+
+                <section data-background="images/coding.png">
+                	<h3>The importance of <b>source</b> and <b>channel</b> coding</h3>
+                </section>
+
+                <section>
+                    <p><img src="images/compression.png"></p>
+                </section>
+
+                <section>
+                	<h3>Compressing an 8-bit message</h3>
+                	<br/><br/>
+                	00110101
+                </section>
+
+                <section>
+                    <span class="fragment fade-out">15 most common messages:  <b>4-bits</b></span>
+                    <br/><br/>
+                    <span class="fragment fade-in">Other 241 messages: 1111 + <b>8-bits</b></span>
+                </section>
+
+                <section>
+                    What if we had to compress a very large number of <b>8-bits</b> messages?
+                    <br/><br/>
+                    <span class="fragment fade-in"><br/>\[N \rightarrow Total\]</span>
+                    <span class="fragment fade-in">\[K \rightarrow Common\]</span>
+                    <br/><br/>
+                    <span class="fragment fade-in"><br/>Total of bits required:<br/></span>
+                    <span class="fragment fade-in"><br/>\[4K + 12(N - K)\]</span>
+                </section>
+
+                <section>
+                	<h4>Probability formalism</h4>
+                	Sequence of messages, each having a probability density $p(X)$
+                	<br/><br/>
+                	\[\{x_1, x_2, x_3, ...\}\]
+                	<br/><br/>
+                	<span class="fragment fade-in">Assume that $15$ messages have $5\%$ of chance of ocurring each. The other $241$ have the remaining $25\%$</span>
+                </section>
+
+                <section>
+                	The expected number of bits required to compress a single message can be calculated as the following:
+                	<br/><br/>
+                	\[\sum_i p(x_i) b(x_i)\]
+                </section>
+
+                <section>
+                	<h3>Is there a better way of compressing these messages?</h3>
+                	<br/><br/>
+                	<span class="fragment fade-in">Concatanating and dealing with symbols</span>
+                </section>
+
+                <section>
+                	<h3>Entropy</h3>
+                	<br/><br/>
+                	<span class="fragment fade-out">\[H(X) = -E_{p(X)}[\log p(x)]\]</span>
+                	<span class="fragment fade-in">\[H(X) = -\sum_{i = 1}^n p(x_i)\log p(x_i)\]</span>
+                	<br/><br/>
+                	<span class="fragment fade-in">Quantifies the expected value of the <b>information contained in a message</b>, therefore providing an absolute <b>limit on the best lossless encoding</b> possible.</span>
+            	</section>
+
+            	<section>
+            		<h3>Shannon Coding Theorem</h3>
+            		<br/><br/>
+            		As the number of symbols go to infinity, it is <i>possible</i> to compress each symbols to $H(X)$ bits on average, and it's <i>impossible</i> to do better.
+            	</section>
+
+            	<section>
+                    <p><img src="images/channel.png"></p>
+                </section>
+
+                <section>
+                    Binary sequence to be transmitted to another device
+                    <br/><br/>
+                    \[\{s_1, s_2, ...\}\]
+                </section>
+
+                <section>
+                	An noisy channel introduces random errors with probability $p$
+                	<br/><br/>
+                	\[\{x_1, x_2, ...\} \xrightarrow{channel} \{\tilde{x}_1, \tilde{x}_2, ...\}\]
+                </section>
+
+                <section>
+                	What sequence $\{x_i\}$ should be sent over the channel if the aim is to send $\{s_i\}$ reliably to the receiver?
+                	<br/><br/>
+                	<p><img src="images/channel.png"></p>
+                </section>
+
+                <section>
+                	The message $S$ is divided in block of length $K$, each encoded to a block of length $N$
+                </section>
+
+                <section>
+                	<h3>Example: parity bit</h3>
+                	<br/><br/>
+                	\[K = 2\]
+                	\[N = 3\]
+                </section>
+
+                <section>
+                	<h3>Rate of the code</h3>
+                	<br/><br/>
+                	\[R = \frac{K}{N}\]
+                	<br/><br/>
+                	<span class="fragment fade-in">If $K$ is large, a sofisticated form of redundancy can be introduced, even keeping rate $R$ constant</span>
+                </section>
+
+                <section>
+                	<h3>Channel Capacity</h3>
+                	<br/><br/>
+                	There is a rate $C$ such that, for any rate $R < C$ and any desired error rate $\varepsilon > 0$, exists a $K$ and a block coder/decoder such that the receiver can decode each bit with error probability less that $\varepsilon$. 
+                </section>
+
+                <section>
+                	<h3>Mutual Information: Intuition</h3>
+                	<br/><br/>
+                	Measures how much information the output provides about the input. The more reliable the channel, the larger the mutual information.  
+                </section>
+
+                <section>
+                	<h3>Example: dice roll</h3>
+                	\[X \to \{1, ..., 6\}\]
+                	\[Y \to \{odd, even\}\]
+                	<br/><br/>
+                	<span class="fragment fade-in">Before knowing $Y$: $H(X) = \log_2 6$<br/></span>
+                	<span class="fragment fade-in">After knowing $Y$: $H(X|Y) = \log_2 3$</span>
+                </section>
+
+                <section>
+                \[I(X;Y) = H(X) - H(X|Y)\]
+                </section>
+
+                <section>
+                	<h3>Example: Binary Channel</h3>
+                	<br/><br/>
+                	In this channel, $X$ takes the value of one with probability $q$, and the error probability is $p$
+                	<br/><br/>
+                	<span class="fragment fade-in">$I(X;Y) = H(q) - H(p)$</span>
+                </section>
+
+                <section>
+                	Chosing $X$ to maximize $I(X;Y)$, gives us $I(X;Y) = 0.469$. If we transmit at rates below this, error-free communication is possible.
+                	<br/><br/>
+                	<span class="fragment fade-in">\[C = \sup(I)\]</span>
                 </section>
 
                 <section>
